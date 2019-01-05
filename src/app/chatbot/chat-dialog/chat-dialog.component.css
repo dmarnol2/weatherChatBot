@@ -1,0 +1,60 @@
+.message{
+    border-radius: 5px;
+    margin:0 15px 10px;
+    padding: 10px 20px;
+    position: relative;
+    font-weight: bold;
+    width:300px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus{
+    outline: none;
+}
+
+.input{
+    border:none;
+    border-radius: 5px;
+    padding:10px 20px;
+    position: relative;
+    font-weight: bold;
+    width:300px;
+}
+
+textarea{
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.subBtn{
+    background-color: black;
+    color:red;
+    display: block;
+    width: 300px;
+    font-weight: bold;
+    border: solid 2px red;
+}
+
+.message.to{
+    background-color: grey;
+    color:#363636;
+    margin-left: 70px;
+    text-align: right;
+    width:450px;
+}
+
+.message.from{
+    background-color:white;
+    color:#363636;
+    margin-right:70px;
+    width:450px;
+}
+
+.message.to+.message.to,
+.message.form+.message.from{
+    margin-top:-10px;
+}

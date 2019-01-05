@@ -1,0 +1,26 @@
+<br><br><br>
+<br><br><br>
+
+<div class="container">
+  <div class="col-md-4">
+    <label for = "nameField" style="color:black"></label><br>
+    <textarea rows="4" cols="40" style="position: fixed" [(ngModel)]="formValue" (keyup.enter)="sendMessage()"
+      type="textbox" placeholder="Speak your message or type it here..."></textarea>
+      <br><br><br>
+      <br><br><br>
+    <button style="position: fixed" class="subBtn btn" (click)="sendMessage()">Send</button>
+  </div>
+
+  <div class="container chatB">
+    <div #msg class = "col-md-6 col-md-offset-1" id="chatBox">
+      <div *ngFor="let message of messages | async" class="message" [ngClass]="{'form':message.sentBy==='bot',
+                        'to':message.sentBy==='user'}">
+                      {{message.content}}
+                      <!-- below code creates hyperlink but currently causes each message to become hyperlink -->
+                      <!-- <div *ngIf="user">{{message.content}}</div> -->
+                      <!-- <div *ngIf="!user"><a href={{message.content}}>{{message.content}}</a></div> -->
+                      
+      </div>
+    </div>
+  </div>
+</div>
